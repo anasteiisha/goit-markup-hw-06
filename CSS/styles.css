@@ -27,7 +27,7 @@
   --address-color: rgba(255, 255, 255, 0.6);
   --secondary-bg-color: #f5f4fa;
   --hero-and-footer-bg: #2f303a;
-  --hero-button-active: #188ce8;
+  --btn-active: #188ce8;
   --link-bc--: #afb1b8;
   --socials-footer-bg: rgba(255, 255, 255, 0.1);
   --hero-bg: #c4c4c4;
@@ -80,7 +80,7 @@ p {
   margin-top: 0;
 }
 
-/*  ---------- logo ----------  */
+/*  ---------- Лого ----------  */
 .logo-header {
   margin-right: 93px;
   padding: 25px 0;
@@ -111,7 +111,7 @@ p {
   margin: -1px;
 }
 
-/*  ---------- page header ---------- */
+/*  ---------- Шапка сайту ---------- */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -130,7 +130,7 @@ p {
   padding: 32px 0;
 }
 
-/*  ---------- site nav ----------  */
+/*  ---------- Сайт навігація ----------  */
 .site-nav {
   display: flex;
 }
@@ -176,19 +176,8 @@ p {
 .contacts-nav {
   position: relative;
 }
-/* .site-nav-item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
 
-  width: 100%;
-  height: 4px;
-
-  background-color: var(--color-accent);
-  border-radius: 2px;
-} */
-/*  ---------- contacts nav ----------  */
+/*  ---------- Контакти навігація ----------  */
 
 .contacts-nav {
   display: flex;
@@ -276,7 +265,7 @@ p {
 
   color: var(--white-color);
 }
-.hero-button {
+.hero-btn {
   margin-top: 30px;
   border-radius: 4px;
   padding: 10px 24px;
@@ -299,9 +288,9 @@ p {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--hero-button-active);
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--btn-active);
 }
 
 .btn-close {
@@ -317,7 +306,13 @@ p {
   border-radius: 50%;
   cursor: pointer;
 
+  background-color: var(--white-color);
   fill: var(--black-color);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--accent-color);
 }
 
 .btn-close-svg {
@@ -360,12 +355,208 @@ p {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 528px;
   min-height: 581px;
-  padding: 15px;
 
   background: var(--white-color);
 }
 
-/*  ---------- features ----------  */
+.form-title {
+  display: inline-block;
+
+  width: 448px;
+  height: 23px;
+
+  margin: 40px 40px 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin: 0px 40px 30px;
+}
+
+.form-subtitle {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-area {
+  width: 448px;
+  height: 40px;
+
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.form-field:focus-within > .form-area,
+.form-field:focus-within > .form-svg,
+.form-field-comment:focus-within > .form-comment {
+  fill: var(--accent-color);
+  outline: none;
+
+  border-color: var(--accent-color);
+}
+
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+}
+
+.form-svg {
+  position: absolute;
+
+  top: 50%;
+  left: 15px;
+
+  width: 18px;
+  height: 18px;
+}
+.form-field-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+.form-comment {
+  resize: none;
+  width: 448px;
+  height: 120px;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-field-consent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 30px;
+}
+
+.form-consent input[type="checkbox"] {
+  cursor: pointer;
+}
+.consent-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.form-field-consent a {
+  text-decoration: underline;
+  cursor: pointer;
+
+  color: var(--accent-color);
+}
+
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.checkbox-svg {
+  width: 16px;
+  height: 15px;
+  fill: var(--primary-white-color);
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-svg {
+  width: 16px;
+  height: 15px;
+  margin-right: 8.38px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+
+  fill: var(--white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .checkbox-svg {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-btn {
+  padding: 10px 52px;
+  min-width: 200px;
+  min-height: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  transition: background-color var(--transition-time-hover-focus)
+    cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--btn-active);
+}
+
+/*  ---------- Наші переваги ----------  */
 .section-features {
   padding: 94px 0px;
 }
@@ -427,7 +618,7 @@ p {
 .astronaut-icon::before {
   background-image: url(../images/astronaut.svg);
 }
-/*  ---------- actions ---------- */
+/*  ---------- Чим ми займаємося ---------- */
 
 .section-actions {
   padding-bottom: 94px;
@@ -475,7 +666,7 @@ p {
   color: var(--white-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
-/* ----------  team  ---------- */
+/* ----------  Наша команда  ---------- */
 .section-team {
   padding: 94px 0;
 }
@@ -565,9 +756,9 @@ p {
   background-color: var(--accent-color);
 }
 
-/*  ---------- PORTFOLIO  ---------- */
+/*  ---------- ПОРТФОЛІО  ---------- */
 
-/*  ------ button  ------ */
+/*  ------ кнопка  ------ */
 
 .section-portfolio {
   padding: 94px 0px 94px;
@@ -716,7 +907,7 @@ p {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-/* ------------ clients ------------- */
+/* ------------ Клієнти ------------- */
 .section-clients {
   padding: 94px 0px;
 }
@@ -760,7 +951,7 @@ p {
   justify-content: center;
   margin: 0px;
 }
-/*  ---------- footer  ---------- */
+/*  ---------- Футер  ---------- */
 .section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -819,7 +1010,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/* -------------------Socials team--------------------- */
+/* -------------------Футер соцмережі--------------------- */
 .footer-social {
   display: flex;
   margin-left: 70px;
@@ -875,4 +1066,75 @@ footer {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--accent-color);
+}
+
+/* ------------- Футер підписка --------------- */
+
+.footer-subscription {
+  display: flex;
+  margin-left: 93px;
+  align-items: baseline;
+  flex-direction: column;
+  min-width: 570px;
+  min-height: 86px;
+}
+
+.footer-btn {
+  position: relative;
+  padding: 10px 62px 10px 28px;
+  min-width: 200px;
+  min-height: 50px;
+
+  margin-left: 12px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  transition: background-color var(--transition-time-hover-focus)
+    cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--btn-active);
+}
+
+.footer-btn svg {
+  position: absolute;
+  top: 25%;
+  right: 28px;
+
+  width: 24px;
+  height: 24px;
+
+  fill: var(--white-color);
+}
+
+.form-input {
+  width: 358px;
+  height: 50px;
+
+  padding: 0;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0);
 }

@@ -64,9 +64,10 @@
       <!--Секція hero-->
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-button" data-modal-open>
+        <button type="button" class="hero-btn" data-modal-open>
           Замовити послугу
         </button>
+        <!-- Модалка -->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button type="button" class="btn-close" data-modal-close>
@@ -74,6 +75,70 @@
                 <use href="./images/icons.svg#icon-close-black"></use>
               </svg>
             </button>
+            <b class="form-title">Залиште свої дані, ми вам передзвонимо</b>
+            <form class="request-form">
+              <label class="form-field">
+                <span class="form-subtitle">Ім'я</span>
+                <input
+                  type="text"
+                  class="form-area"
+                  name="name"
+                  class="form-area"
+                />
+                <svg class="form-svg">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </label>
+
+              <label class="form-field">
+                <span class="form-subtitle">Телефон</span>
+                <input
+                  type="tel"
+                  class="form-area"
+                  name="tel"
+                  class="form-area"
+                />
+                <svg class="form-svg">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </label>
+
+              <label class="form-field">
+                <span class="form-subtitle">Пошта</span>
+                <input type="email" class="form-area" name="email" />
+                <svg class="form-svg">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </label>
+
+              <label class="form-field-comment">
+                <span class="form-subtitle">Коментар</span>
+                <textarea
+                  name=""
+                  rows="8"
+                  placeholder="Введіть текст"
+                  class="form-comment"
+                ></textarea>
+              </label>
+
+              <label class="form-field-consent">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  class="checkbox"
+                  value="consent"
+                />
+                <svg class="checkbox-svg">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+                <!-- <span class="icon-check"></span> -->
+                <span class="consent-text"
+                  >Погоджуюся з розсилкою та приймаю&nbsp;
+                  <a href="#">Умови договору</a>
+                </span>
+              </label>
+              <button type="submit" class="form-btn">Відправити</button>
+            </form>
           </div>
         </div>
       </section>
@@ -498,7 +563,7 @@
       </section>
     </main>
 
-    <!--Футер-->
+    <!--ФУТЕР-->
     <footer class="section-footer">
       <div class="container footer">
         <div class="footer-address">
@@ -506,7 +571,7 @@
             <span class="logo-Web">Web</span
             ><span class="logo-studio">Studio</span>
           </a>
-          <!-- Адреса -->
+          <!-- Футер адреса -->
           <address>
             <ul class="address list">
               <li class="list-address">
@@ -532,7 +597,7 @@
           </address>
         </div>
 
-        <!-- Соцмережі -->
+        <!-- Футер соцмережі -->
         <div class="footer-social">
           <h3 class="footer-title">приєднуйтесь</h3>
           <ul class="footer-list list">
@@ -585,6 +650,26 @@
               </a>
             </li>
           </ul>
+        </div>
+        <!-- Футер підписка -->
+        <div class="footer-subscription">
+          <b class="footer-title">Підпишіться на розсилку</b>
+          <form class="footer-form">
+            <label for="email" class="form-email"></label>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              id="email"
+              class="form-input"
+            />
+            <button type="submit" class="footer-btn">
+              Підписатися
+              <svg>
+                <use href="./images/icons.svg#icon-icon"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
