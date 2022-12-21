@@ -295,13 +295,13 @@ p {
 
 .btn-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
 
   padding: 6px;
-  margin: 8px;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
@@ -356,19 +356,17 @@ p {
   min-width: 528px;
   min-height: 581px;
 
+  padding: 40px;
+
   background: var(--white-color);
 }
 
 .form-title {
   display: inline-block;
-
-  width: 448px;
-  height: 23px;
-
-  margin: 40px 40px 12px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -380,8 +378,6 @@ p {
   flex-direction: column;
 
   align-items: flex-start;
-
-  margin: 0px 40px 30px;
 }
 
 .form-subtitle {
